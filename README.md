@@ -1,8 +1,8 @@
 # TIC4301_Project
 TIC4301 Project - CVE-2021-40444
 
-Download the following vagrant boxes:
-Kali  -  https://drive.google.com/file/d/1RegQcT2jjFoaQRgLjXDYl4iS0HNt_mU2/view?usp=sharing
+Download the following vagrant boxes: \
+Kali  -  https://drive.google.com/file/d/1RegQcT2jjFoaQRgLjXDYl4iS0HNt_mU2/view?usp=sharing \
 Win10 -  https://drive.google.com/file/d/1zcLertRoI-FrHDkRq1NO-KHaF88bMv6e/view?usp=sharing
 
 Import the boxes with the following commands through vagrant:
